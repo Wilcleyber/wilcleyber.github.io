@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilcleyber | Portfólio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { 
+      background: linear-gradient(135deg, #1b1b2f, #6441a5, #312450);
+      color: #f0f0f0; 
+      padding-left: 32px; 
+      padding-right: 32px;
+    }
+    .menu-toggle { position: fixed; top: 20px; left: 20px; z-index: 1000; cursor: pointer; background-color: #2e2e2e; padding: 10px; border-radius: 8px; transition: background 0.3s; }
+    .menu-toggle:hover { background-color: #3e3e3e; }
+    .lang-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; background-color: #2e2e2e; padding: 10px; border-radius: 8px; color: #ccc; cursor: pointer; }
+    .lang-toggle:hover { background-color: #3e3e3e; }
+    .sidebar { position: fixed; left: -220px; top: 60px; width: 200px; height: calc(100% - 60px); background-color: #121212; padding: 20px; transition: left 0.3s; }
+    .sidebar.open { left: 0; }
+    .sidebar nav a { display: block; margin: 20px 0; color: #ccc; text-decoration: none; }
+    header { text-align: center; padding: 80px 20px 20px; }
+    header h1 { font-size: 4.5rem; color: #c77dff; }
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem 0;
+      align-items: center;
+    }
+    .project-images {
+      flex: 1;
+      max-width: 500px;
+      position: relative;
+    }
+    .project-images img {
+      width: 100%;
+      display: none;
+      border-radius: 16px;
+      box-shadow: 0 0 15px #00000033;
+    }
+    .project-images img.active {
+      display: block;
+    }
+    .dots {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #9b5de5;
+    }
+    .project-details {
+      flex: 1;
+      min-width: 280px;
+    }
+    .project-buttons {
+      margin-top: 1rem;
+    }
+    .project-buttons .btn {
+      margin-right: 1rem;
+      background-color: #9b5de5;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #999; }
+    footer a { color: #c77dff; text-decoration: none; margin: 0 8px; }
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-photo img {
+        width: 240px;
+        height: 240px;
+      }
+
+      .project {
+        flex-direction: column;
+      }
+
+      .project-buttons .btn {
+        display: block;
+        margin: 1rem auto;
+      }
+    }
+    .profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 48px 0 32px 0;
+  padding-left: 0;
+}
+
+.profile-photo img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 24px; 
+  border: 3px solid #c77dff;
+  box-shadow: 0 2px 16px #0003;
+  background: #222;
+  margin-top: 2rem; 
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.profile-name {
+  font-size: 4.2rem;
+  color: #c77dff;
+  margin-bottom: 0.8rem; 
+  text-align: left;
+  font-weight: center;
+}
+
+.profile-desc {
+  font-size: 1.6rem;
+  color: #f0f0f0;
+  max-width: 1600px;
+  text-align: left;
+  margin-top: 2rem; 
+}
+  </style>
+</head>
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()"><span style="font-size: 1.5rem;">&#9776;</span></div>
+  <div class="lang-toggle" id="lang-toggle">PT &#9662;</div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="#about" data-i18n="aboutNav"></a>
+      <a href="#projects" data-i18n="projectsNav"></a>
+      <a href="#contact" data-i18n="contactNav"></a>
+    </nav>
+  </div>
+
+  <section class="profile">
+  <div class="profile-photo">
+    <img src="Wilcleyber.jpg" alt="Foto de Wilcleyber">
+  </div>
+  <div class="profile-info">
+    <h2 class="profile-name">Wilcleyber</h2>
+    <p class="profile-desc" data-i18n="aboutText">
+      Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, desenvolvimento de software e eficiência. Estou construindo meu portfólio com projetos práticos para crescer profissionalmente e conquistar meu primeiro estágio na área de desenvolvimento.
+    </p>
+  </div>
+</section>
+
+  <header>
+    <h1 class="section-title" data-i18n="projects">Projetos</h1>
+  </header>
+
+  <section id="projects">
+    <div class="project">
+      <div class="project-images">
+        <img src="FlexiCalc (3).png" class="active" alt="1">
+        <img src="FlexiCalc (2).png" alt="2">
+        <img src="FlexiCalc (1).png" alt="3">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+          <span class="dot" onclick="showImage(2, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project1Title">FlexiCalc - Calculadora Gráfica Inteligente</h3>
+        <p data-i18n="project1Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/FlexiCalc.git" class="btn" target="_blank" data-i18n="viewGithub">Ver no GitHub</a>
+          <a href="https://github.com/Wilcleyber/FlexiCalc/releases/download/v1.0/FlexiCalc.exe" class="btn" target="_blank" data-i18n="downloadExe">Baixar .exe</a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-images">
+        <img src="EasyTask (1).png" class="active" alt="1">
+        <img src="EasyTask (2).png" alt="2">
+        <img src="EasyTask (3).png" alt="3">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+          <span class="dot" onclick="showImage(2, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project2Title"></h3>
+        <p data-i18n="project2Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/Gerenciador-de-Tarefas.git" class="btn" target="_blank" data-i18n="viewGithub">Ver no GitHub</a>
+          <a href="https://github.com/Wilcleyber/Gerenciador-de-Tarefas/releases/download/v1.0/EasyTask.rar" class="btn" target="_blank" data-i18n="downloadExe">Baixar .exe</a>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
+  <footer id="contact">
+    <p>
+      <span data-i18n="contactPrompt"></span>
+      <a href="mailto:wilcleyber2@gmail.com">wilcleyber2@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/wilcleyber" data-i18n="linkedin"></a> |
+      <a href="https://github.com/Wilcleyber" data-i18n="github"></a>
+    </p>
+  </footer>
+
+  <script>
+    const translations = {
+      pt: {
+        projectsNav: 'Projetos',
+        contactNav: 'Contato',
+        aboutText: 'Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia, desenvolvimento de software e eficiência. Estou construindo meu portfólio com projetos práticos para crescer profissionalmente e conquistar meu primeiro estágio na área de desenvolvimento.',
+        projects: 'Projetos',
+        contactPrompt: 'Entre em contato:',
+        linkedin: 'LinkedIn',
+        github: 'GitHub',
+        viewGithub: 'Ver no GitHub',     
+        downloadExe: 'Baixar .exe',
+        project1Title: 'FlexiCalc - Calculadora Gráfica Inteligente',
+        project1Desc: 'O FlexiCalc é uma calculadora gráfica interativa desenvolvida em Python com Tkinter, projetada para atender tanto estudantes quanto profissionais que precisam de cálculos rápidos e organizados. Com uma interface moderna e intuitiva, o sistema oferece funcionalidades como operações matemáticas básicas, conversões de temperatura entre Celsius, Fahrenheit e Kelvin, além do cálculo de áreas geométricas de diferentes formas. Tudo isso é apresentado de forma clara e dinâmica, garantindo praticidade no dia a dia.\nAlém de sua estrutura modularizada, que facilita futuras expansões, o FlexiCalc se destaca por seu design responsivo e otimizado para exibir resultados de forma rápida e acessível. O projeto é ideal tanto para aprendizado quanto para demonstração profissional, servindo como uma ferramenta útil para cálculos diversos. Seu modo escuro ativado por padrão e a organização bem planejada tornam a experiência mais agradável e eficiente para os usuários.',
+        project2Title: 'EasyTask - Gerenciador de Tarefas',
+        project2Desc: 'O EasyTask é um gerenciador de tarefas simples e eficiente desenvolvido em Python com Tkinter, ideal para organizar compromissos de forma prática e intuitiva. Com uma interface gráfica minimalista, ele permite adicionar, editar e remover tarefas, além de marcar automaticamente como concluídas após a data definida. O sistema suporta frequência de repetição diária, semanal e anual, além de lembretes com avisos 10 minutos antes do vencimento. Os usuários podem filtrar facilmente entre tarefas pendentes e concluídas, garantindo uma visão clara das atividades. Para maior praticidade, os dados são armazenados localmente em um arquivo JSON, facilitando o acesso e a manutenção das informações. O projeto foi estruturado para ser leve e funcional, proporcionando uma experiência fluida para quem precisa gerenciar tarefas de maneira simples, sem depender de ferramentas complexas.'
+      },
+      en: {
+        projectsNav: 'Projects',
+        contactNav: 'Contact',
+        about: 'About Me',
+        aboutText: 'I am a Systems Analysis and Development student, passionate about technology, software development, and efficiency. I am building my portfolio with practical projects to grow professionally and land my first internship in software development.',
+        projects: 'Projects',
+        contactPrompt: 'Contact me:',
+        linkedin: 'LinkedIn',
+        github: 'GitHub',
+        viewGithub: 'View on GitHub',     
+        downloadExe: 'Download .exe',
+        project1Title: 'FlexiCalc - Smart Graphic Calculator',
+        project1Desc: `FlexiCalc is an interactive graphic calculator developed in Python with Tkinter, designed to serve both students and professionals who need quick and organized calculations. With a modern and intuitive interface, the system offers features such as basic mathematical operations, temperature conversions between Celsius, Fahrenheit, and Kelvin, as well as the calculation of geometric areas for different shapes. All of this is presented clearly and dynamically, ensuring practicality in everyday life.
+In addition to its modular structure, which facilitates future expansions, FlexiCalc stands out for its responsive design and optimization to display results quickly and accessibly. The project is ideal for both learning and professional demonstration, serving as a useful tool for various calculations. Its dark mode is enabled by default, and the well-planned organization makes the experience more pleasant and efficient for users.`,
+        project2Title: 'EasyTask - Task Manager',
+        project2Desc: 'EasyTask is a simple and efficient task manager developed in Python with Tkinter, designed to help users organize their schedules in an intuitive and practical way. With a minimalist graphical interface, it allows adding, editing, and removing tasks while automatically marking them as completed after the set date. The system supports daily, weekly, and yearly recurrence options, as well as reminders with alerts 10 minutes before the due time. Users can easily filter between pending and completed tasks, ensuring a clear view of activities. For convenience, all data is stored locally in a JSON file, making access and maintenance easier. The project is designed to be lightweight and functional, providing a seamless experience for those who need to manage tasks efficiently without relying on complex tools.'
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = translations[lang][key];
+      });
+      document.getElementById('lang-toggle').innerHTML = lang.toUpperCase() + ' &#9662;';
+    }
+
+    function detectAndSetLanguage() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const lang = userLang.startsWith('en') ? 'en' : 'pt';
+      setLanguage(lang);
+      document.getElementById('lang-toggle').dataset.lang = lang;
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      const current = document.getElementById('lang-toggle').dataset.lang;
+      const next = current === 'pt' ? 'en' : 'pt';
+      setLanguage(next);
+      document.getElementById('lang-toggle').dataset.lang = next;
+    });
+
+    window.onload = () => {
+      detectAndSetLanguage();
+    };
+
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+
+    function openProject(id) {
+  
+      alert('Abrir detalhes do projeto: ' + id);
+    }
+
+    function showImage(index, el) {
+      const project = el.closest('.project');
+      const images = project.querySelectorAll('.project-images img');
+      const dots = project.querySelectorAll('.dot');
+
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>
