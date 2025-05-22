@@ -211,6 +211,26 @@
         </div>
       </div>
     </div>
+    <div class="project">
+      <div class="project-images">
+        <img src="Currency Converter (1).png" class="active" alt="1">
+        <img src="Currency Converter (2).png" alt="2">
+        <img src="Currency Converter (3).png" alt="3">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+          <span class="dot" onclick="showImage(2, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project3Title"></h3>
+        <p data-i18n="project3Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/Currency-Converter.git" class="btn" target="_blank" data-i18n="viewGithub">Ver no GitHub</a>
+          <a href="https://github.com/Wilcleyber/Currency-Converter/releases/download/v1.0/Currency_Converterv1.0.exe" class="btn" target="_blank" data-i18n="downloadExe">Baixar .exe</a>
+        </div>
+      </div>
+    </div>
   
   </section>
 
@@ -238,8 +258,10 @@
         project1Title: 'FlexiCalc - Calculadora Gráfica Inteligente',
         project1Desc: 'O FlexiCalc é uma calculadora gráfica interativa desenvolvida em Python com Tkinter, projetada para atender tanto estudantes quanto profissionais que precisam de cálculos rápidos e organizados. Com uma interface moderna e intuitiva, o sistema oferece funcionalidades como operações matemáticas básicas, conversões de temperatura entre Celsius, Fahrenheit e Kelvin, além do cálculo de áreas geométricas de diferentes formas. Tudo isso é apresentado de forma clara e dinâmica, garantindo praticidade no dia a dia.\nAlém de sua estrutura modularizada, que facilita futuras expansões, o FlexiCalc se destaca por seu design responsivo e otimizado para exibir resultados de forma rápida e acessível. O projeto é ideal tanto para aprendizado quanto para demonstração profissional, servindo como uma ferramenta útil para cálculos diversos. Seu modo escuro ativado por padrão e a organização bem planejada tornam a experiência mais agradável e eficiente para os usuários.',
         project2Title: 'EasyTask - Gerenciador de Tarefas',
-        project2Desc: 'O EasyTask é um gerenciador de tarefas simples e eficiente desenvolvido em Python com Tkinter, ideal para organizar compromissos de forma prática e intuitiva. Com uma interface gráfica minimalista, ele permite adicionar, editar e remover tarefas, além de marcar automaticamente como concluídas após a data definida. O sistema suporta frequência de repetição diária, semanal e anual, além de lembretes com avisos 10 minutos antes do vencimento. Os usuários podem filtrar facilmente entre tarefas pendentes e concluídas, garantindo uma visão clara das atividades. Para maior praticidade, os dados são armazenados localmente em um arquivo JSON, facilitando o acesso e a manutenção das informações. O projeto foi estruturado para ser leve e funcional, proporcionando uma experiência fluida para quem precisa gerenciar tarefas de maneira simples, sem depender de ferramentas complexas.'
-      },
+        project2Desc: 'O EasyTask é um gerenciador de tarefas simples e eficiente desenvolvido em Python com Tkinter, ideal para organizar compromissos de forma prática e intuitiva. Com uma interface gráfica minimalista, ele permite adicionar, editar e remover tarefas, além de marcar automaticamente como concluídas após a data definida. O sistema suporta frequência de repetição diária, semanal e anual, além de lembretes com avisos 10 minutos antes do vencimento. Os usuários podem filtrar facilmente entre tarefas pendentes e concluídas, garantindo uma visão clara das atividades. Para maior praticidade, os dados são armazenados localmente em um arquivo JSON, facilitando o acesso e a manutenção das informações. O projeto foi estruturado para ser leve e funcional, proporcionando uma experiência fluida para quem precisa gerenciar tarefas de maneira simples, sem depender de ferramentas complexas.',
+        project3Title: 'Currency Converter - Conversor de Moeda',
+        project3Desc: 'O Currency Converter é um aplicativo de conversão de moedas desenvolvido em Python com interface gráfica em Tkinter. Ele permite converter em tempo real entre moedas tradicionais (USD, EUR, BRL, JPY, GBP) e visualizar a variação histórica da taxa de câmbio nos últimos 7 dias por meio de um gráfico interativo. O sistema oferece validação de entrada, tratamento de erros e uma experiência intuitiva para o usuário. Ideal para quem precisa acompanhar as oscilações do mercado de forma prática e visual.'
+      }, 
       en: {
         projectsNav: 'Projects',
         contactNav: 'Contact',
@@ -255,7 +277,9 @@
         project1Desc: `FlexiCalc is an interactive graphic calculator developed in Python with Tkinter, designed to serve both students and professionals who need quick and organized calculations. With a modern and intuitive interface, the system offers features such as basic mathematical operations, temperature conversions between Celsius, Fahrenheit, and Kelvin, as well as the calculation of geometric areas for different shapes. All of this is presented clearly and dynamically, ensuring practicality in everyday life.
 In addition to its modular structure, which facilitates future expansions, FlexiCalc stands out for its responsive design and optimization to display results quickly and accessibly. The project is ideal for both learning and professional demonstration, serving as a useful tool for various calculations. Its dark mode is enabled by default, and the well-planned organization makes the experience more pleasant and efficient for users.`,
         project2Title: 'EasyTask - Task Manager',
-        project2Desc: 'EasyTask is a simple and efficient task manager developed in Python with Tkinter, designed to help users organize their schedules in an intuitive and practical way. With a minimalist graphical interface, it allows adding, editing, and removing tasks while automatically marking them as completed after the set date. The system supports daily, weekly, and yearly recurrence options, as well as reminders with alerts 10 minutes before the due time. Users can easily filter between pending and completed tasks, ensuring a clear view of activities. For convenience, all data is stored locally in a JSON file, making access and maintenance easier. The project is designed to be lightweight and functional, providing a seamless experience for those who need to manage tasks efficiently without relying on complex tools.'
+        project2Desc: 'EasyTask is a simple and efficient task manager developed in Python with Tkinter, designed to help users organize their schedules in an intuitive and practical way. With a minimalist graphical interface, it allows adding, editing, and removing tasks while automatically marking them as completed after the set date. The system supports daily, weekly, and yearly recurrence options, as well as reminders with alerts 10 minutes before the due time. Users can easily filter between pending and completed tasks, ensuring a clear view of activities. For convenience, all data is stored locally in a JSON file, making access and maintenance easier. The project is designed to be lightweight and functional, providing a seamless experience for those who need to manage tasks efficiently without relying on complex tools.',
+        project3Title: 'Currency Converter',
+        project3Desc: 'Currency Converter is a desktop application built with Python and Tkinter that allows users to convert between traditional currencies (USD, EUR, BRL, JPY, GBP) in real time. It also features an interactive chart showing the exchange rate variation over the past 7 days. With input validation, error handling, and a clean user interface, it provides a practical and visual way to keep track of currency fluctuations.'
       }
     };
 
