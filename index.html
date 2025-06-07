@@ -172,6 +172,25 @@
   <section id="projects">
     <div class="project">
       <div class="project-images">
+        <img src="BiblioTechAPI.png" class="active" alt="1">
+        <img src="BiblioTechDocs.png" alt="2">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+          <span class="dot" onclick="showImage(2, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project4Title">BiblioTech_Backend - Gerenciador de Livros!</h3>
+        <p data-i18n="project4Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/Backend-BiblioTech.git" class="btn" target="_blank" data-i18n="viewGithub">Ver no GitHub</a>
+          <a href="https://bibliotech-api-tnjq.onrender.com/docs" class="btn" target="_blank" data-i18n="downloadExe">Baixar .exe</a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-images">
         <img src="FlexiCalc (3).png" class="active" alt="1">
         <img src="FlexiCalc (2).png" alt="2">
         <img src="FlexiCalc (1).png" alt="3">
@@ -254,6 +273,8 @@
         github: 'GitHub',
         viewGithub: 'Ver no GitHub',     
         downloadExe: 'Baixar .exe',
+        project4Title:'BiblioTech_Backend - Gerenciador de Livros!',
+        project4Desc:'Bibliotech Backend é uma API REST para gerenciamento de livros desenvolvida com FastAPI e banco de dados PostgreSQL, totalmente funcional e hospedada online via Render. O sistema permite realizar operações CRUD completas e está pronto para ser consumido por aplicações front-end. O projeto apresenta uma arquitetura simples, organizada e escalável, com documentação acessível publicamente através do Swagger UI. Ele representa a primeira parte do sistema completo, cuja próxima etapa será o desenvolvimento do front-end conectado.',
         project1Title: 'FlexiCalc - Calculadora Gráfica Inteligente',
         project1Desc: 'O FlexiCalc é uma calculadora gráfica interativa desenvolvida em Python com Tkinter, projetada para atender tanto estudantes quanto profissionais que precisam de cálculos rápidos e organizados. Com uma interface moderna e intuitiva, o sistema oferece funcionalidades como operações matemáticas básicas, conversões de temperatura entre Celsius, Fahrenheit e Kelvin, além do cálculo de áreas geométricas de diferentes formas. Tudo isso é apresentado de forma clara e dinâmica, garantindo praticidade no dia a dia.\nAlém de sua estrutura modularizada, que facilita futuras expansões, o FlexiCalc se destaca por seu design responsivo e otimizado para exibir resultados de forma rápida e acessível. O projeto é ideal tanto para aprendizado quanto para demonstração profissional, servindo como uma ferramenta útil para cálculos diversos. Seu modo escuro ativado por padrão e a organização bem planejada tornam a experiência mais agradável e eficiente para os usuários.',
         project2Title: 'EasyTask - Gerenciador de Tarefas',
@@ -272,9 +293,10 @@
         github: 'GitHub',
         viewGithub: 'View on GitHub',     
         downloadExe: 'Download .exe',
+        project4Title:'BiblioTech_Backend - Book Management System!',
+        project4Desc:'Bibliotech Backend is a REST API for book management, developed with FastAPI and PostgreSQL, fully functional and hosted online via Render. The system allows complete CRUD operations and is ready to be consumed by front-end applications. The project features a simple, organized, and scalable architecture, with publicly accessible documentation through Swagger UI. It represents the first part of the complete system, with the next phase being the development of the connected front-end.',
         project1Title: 'FlexiCalc - Smart Graphic Calculator',
-        project1Desc: `FlexiCalc is an interactive graphic calculator developed in Python with Tkinter, designed to serve both students and professionals who need quick and organized calculations. With a modern and intuitive interface, the system offers features such as basic mathematical operations, temperature conversions between Celsius, Fahrenheit, and Kelvin, as well as the calculation of geometric areas for different shapes. All of this is presented clearly and dynamically, ensuring practicality in everyday life.
-In addition to its modular structure, which facilitates future expansions, FlexiCalc stands out for its responsive design and optimization to display results quickly and accessibly. The project is ideal for both learning and professional demonstration, serving as a useful tool for various calculations. Its dark mode is enabled by default, and the well-planned organization makes the experience more pleasant and efficient for users.`,
+        project1Desc: `FlexiCalc is an interactive graphic calculator developed in Python with Tkinter, designed to serve both students and professionals who need quick and organized calculations. With a modern and intuitive interface, the system offers features such as basic mathematical operations, temperature conversions between Celsius, Fahrenheit, and Kelvin, as well as the calculation of geometric areas for different shapes. All of this is presented clearly and dynamically, ensuring practicality in everyday life.In addition to its modular structure, which facilitates future expansions, FlexiCalc stands out for its responsive design and optimization to display results quickly and accessibly. The project is ideal for both learning and professional demonstration, serving as a useful tool for various calculations. Its dark mode is enabled by default, and the well-planned organization makes the experience more pleasant and efficient for users.`,
         project2Title: 'EasyTask - Task Manager',
         project2Desc: 'EasyTask is a simple and efficient task manager developed in Python with Tkinter, designed to help users organize their schedules in an intuitive and practical way. With a minimalist graphical interface, it allows adding, editing, and removing tasks while automatically marking them as completed after the set date. The system supports daily, weekly, and yearly recurrence options, as well as reminders with alerts 10 minutes before the due time. Users can easily filter between pending and completed tasks, ensuring a clear view of activities. For convenience, all data is stored locally in a JSON file, making access and maintenance easier. The project is designed to be lightweight and functional, providing a seamless experience for those who need to manage tasks efficiently without relying on complex tools.',
         project3Title: 'Currency Converter',
