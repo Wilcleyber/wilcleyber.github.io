@@ -172,6 +172,25 @@
   <section id="projects">
     <div class="project">
       <div class="project-images">
+        <img src="Bibliotech1.gif" class="active" alt="1">
+        <img src="Bibliotech2.gif" alt="2">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+          <span class="dot" onclick="showImage(2, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project5Title">BiblioTech_Frontend - Gerenciador de Livros!</h3>
+        <p data-i18n="project5Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/BiblioTech_Frontend.git" class="btn" target="_blank" data-i18n="viewGithub">Ver no GitHub</a>
+          <a href="https://wilcleyber.github.io/BiblioTech_Frontend/" class="btn" target="_blank" data-i18n="downloadExe">Baixar .exe</a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-images">
         <img src="BiblioTechAPI.png" class="active" alt="1">
         <img src="BiblioTechDocs.png" alt="2">
         <div class="dots">
@@ -273,6 +292,8 @@
         github: 'GitHub',
         viewGithub: 'Ver no GitHub',     
         downloadExe: 'Baixar .exe',
+        project5Title:'BiblioTech_Frontend - Gerenciador de Livros!',
+        project5Desc:'Bibliotech é um sistema completo de gerenciamento de livros, com interface web e integração com API REST. O usuário pode adicionar, editar, excluir, ordenar e filtrar livros com base em diferentes critérios. O front-end foi desenvolvido com HTML, CSS e JavaScript puro, enquanto o back-end foi construído com FastAPI e conectado a um banco de dados PostgreSQL online, possibilitando a execução das operações CRUD. O projeto está totalmente funcional e acessível online.',
         project4Title:'BiblioTech_Backend - Gerenciador de Livros!',
         project4Desc:'Bibliotech Backend é uma API REST para gerenciamento de livros desenvolvida com FastAPI e banco de dados PostgreSQL, totalmente funcional e hospedada online via Render. O sistema permite realizar operações CRUD completas e está pronto para ser consumido por aplicações front-end. O projeto apresenta uma arquitetura simples, organizada e escalável, com documentação acessível publicamente através do Swagger UI. Ele representa a primeira parte do sistema completo, cuja próxima etapa será o desenvolvimento do front-end conectado.',
         project1Title: 'FlexiCalc - Calculadora Gráfica Inteligente',
@@ -293,6 +314,8 @@
         github: 'GitHub',
         viewGithub: 'View on GitHub',     
         downloadExe: 'Download .exe',
+        project5Title: 'BiblioTech_Frontend - Book Management System!',
+        project5Desc: 'Bibliotech is a complete book management system with a web interface and REST API integration. Users can add, edit, delete, sort, and filter books based on various criteria. The front-end is developed using pure HTML, CSS, and JavaScript, while the back-end is built with FastAPI and connected to an online PostgreSQL database, enabling full CRUD operations. The project is fully functional and accessible online.',
         project4Title:'BiblioTech_Backend - Book Management System!',
         project4Desc:'Bibliotech Backend is a REST API for book management, developed with FastAPI and PostgreSQL, fully functional and hosted online via Render. The system allows complete CRUD operations and is ready to be consumed by front-end applications. The project features a simple, organized, and scalable architecture, with publicly accessible documentation through Swagger UI. It represents the first part of the complete system, with the next phase being the development of the connected front-end.',
         project1Title: 'FlexiCalc - Smart Graphic Calculator',
