@@ -172,6 +172,24 @@
   <section id="projects">
     <div class="project">
       <div class="project-images">
+        <img src="HRLite1.png" class="active" alt="1">
+        <img src="HRLite2.png" alt="2">
+        <div class="dots">
+          <span class="dot active" onclick="showImage(0, this)"></span>
+          <span class="dot" onclick="showImage(1, this)"></span>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3 data-i18n="project6Title">HRLite - Human Resources API</h3>
+        <p data-i18n="project6Desc"></p>
+        <div class="project-buttons">
+          <a href="https://github.com/Wilcleyber/HRLite_Backend" class="btn" target="_blank" data-i18n="viewGithub">View on GitHub</a>
+          <a href="https://hrlite-api.onrender.com/docs" class="btn" target="_blank" data-i18n="tryApiOnline">Try API Online</a>
+        </div>
+      </div>
+    </div>    
+    <div class="project">
+      <div class="project-images">
         <img src="Bibliotech1.gif" class="active" alt="1">
         <img src="Bibliotech2.gif" alt="2">
         <div class="dots">
@@ -292,6 +310,9 @@
         github: 'GitHub',
         viewGithub: 'Ver no GitHub',     
         downloadExe: 'Baixar .exe',
+        tryApiOnline: 'Testar API Online',
+        project6Title: 'HRLite - API de Recursos Humanos',
+        project6Desc: 'HRLite é uma API RESTful para gerenciamento de colaboradores, desenvolvida com FastAPI e PostgreSQL, hospedada no Render. Possui funcionalidades como cadastro, listagem, filtragem, edição e gerenciamento de status. Totalmente documentada e pronta para integração com qualquer front-end.',
         project5Title:'BiblioTech_Frontend - Gerenciador de Livros!',
         project5Desc:'Bibliotech é um sistema completo de gerenciamento de livros, com interface web e integração com API REST. O usuário pode adicionar, editar, excluir, ordenar e filtrar livros com base em diferentes critérios. O front-end foi desenvolvido com HTML, CSS e JavaScript puro, enquanto o back-end foi construído com FastAPI e conectado a um banco de dados PostgreSQL online, possibilitando a execução das operações CRUD. O projeto está totalmente funcional e acessível online.',
         project4Title:'BiblioTech_Backend - Gerenciador de Livros!',
@@ -314,6 +335,9 @@
         github: 'GitHub',
         viewGithub: 'View on GitHub',     
         downloadExe: 'Download .exe',
+        tryApiOnline: 'Try API Online',
+        project6Title: 'HRLite - Human Resources API',
+        project6Desc: 'HRLite is a RESTful API for managing collaborators, built with FastAPI and PostgreSQL, deployed on Render. Features include registration, listing, filtering, editing, and status management. Fully documented and ready for integration with any frontend.',        
         project5Title: 'BiblioTech_Frontend - Book Management System!',
         project5Desc: 'Bibliotech is a complete book management system with a web interface and REST API integration. Users can add, edit, delete, sort, and filter books based on various criteria. The front-end is developed using pure HTML, CSS, and JavaScript, while the back-end is built with FastAPI and connected to an online PostgreSQL database, enabling full CRUD operations. The project is fully functional and accessible online.',
         project4Title:'BiblioTech_Backend - Book Management System!',
